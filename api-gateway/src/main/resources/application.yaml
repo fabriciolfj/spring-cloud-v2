@@ -24,3 +24,9 @@ spring:
             - Path=/test/**
           filters:
             - RewritePath=/test/(?<segment>.*), /currency-conversion/${segment}
+  sleuth:
+    sampler:
+      probability: 1.0
+
+  zipikin:
+    baseUrl: http://localhost:9411/
